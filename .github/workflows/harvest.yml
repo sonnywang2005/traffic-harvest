@@ -1,0 +1,39 @@
+# Put this file at .github/workflows/harvest.yml in your repo.
+# Clicking "Run workflow" by hand collects one round immediately, at any hour.
+# Runs every 10 minutes from 17:00 to 23:50 UTC (noon to 6:50pm ET in winter).
+# harvest.py itself skips anything outside noon to 6pm ET.
+name: harvest-travel-times
+
+on:
+  schedule:
+    - cron: "*/10 17-23 * * *"
+  workflow_dispatch: {}   # lets you click "Run workflow" to test it
+
+permissions:
+  contents: write
+
+concurrency:
+  group: harvest
+  cancel-in-progress: false
+
+jobs:
+  harvest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install requests
+      # Manual "Run workflow" clicks use --force so you can test at any hour
+      - run: python harvest.py ${{ github.event_name == 'workflow_dispatch' && '--force' || '' }}
+        env:
+          MAPBOX_TOKEN: ${{ secrets.MAPBOX_TOKEN }}
+      - name: Save new rows to the repo
+        run: |
+          git config user.name "harvest-bot"
+          git config user.email "harvest-bot@users.noreply.github.com"
+          git add data/travel_times.csv || true
+          git commit -m "harvest $(date -u +%Y-%m-%dT%H:%MZ)" || echo "nothing new"
+          git pull --rebase
+          git push

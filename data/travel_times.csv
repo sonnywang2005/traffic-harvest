@@ -1,0 +1,11 @@
+timestamp_et,weekday,pair,duration_s,duration_typical_s,distance_m,route_summary
+2026-11-10 11:06,Tue,harvard_to_porter,405.0,359.797,1794.7,"Massachusetts Avenue, Peabody Street"
+2026-11-10 11:06,Tue,porter_to_harvard,740.2,592.095,2984.6,"Somerville Avenue, Massachusetts Avenue"
+2026-11-10 11:06,Tue,harvard_to_central,557.8,479.49,2286.7,"Massachusetts Avenue, Broadway"
+2026-11-10 11:06,Tue,central_to_kendall,458.0,364.493,1574.9,"Massachusetts Avenue, Main Street"
+2026-11-10 11:06,Tue,harvard_to_kendall,837.6,718.543,3479.1,"Cambridge Street, Broadway"
+2026-11-10 11:06,Tue,porter_to_davis,337.0,281.057,1265.6,"Elm Street, Highland Avenue"
+2026-11-10 11:06,Tue,porter_to_alewife,493.1,473.31,2299.0,"Massachusetts Avenue, Rindge Avenue"
+2026-11-10 11:06,Tue,harvard_to_inman,581.2,461.012,2473.3,"Kirkland Street, Beacon Street"
+2026-11-10 11:06,Tue,harvard_to_common,1298.3,1092.869,9103.7,"Soldiers Field Road, Storrow Drive"
+2026-11-10 11:06,Tue,kendall_to_common,661.3,529.271,2804.4,"MA 3, Charles Street"

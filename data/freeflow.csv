@@ -1,0 +1,11 @@
+pair,freeflow_s,distance_m,route_summary
+harvard_to_porter,477.8,1794.7,"Massachusetts Avenue, Peabody Street"
+porter_to_harvard,711.3,2985.9,"Somerville Avenue, Massachusetts Avenue"
+harvard_to_central,612.9,2367.1,"Broadway, Inman Street"
+central_to_kendall,488.8,1574.9,"Massachusetts Avenue, Main Street"
+harvard_to_kendall,888.3,3479.1,"Cambridge Street, Broadway"
+porter_to_davis,362.6,1265.6,"Elm Street, Highland Avenue"
+porter_to_alewife,615.3,2299.0,"Massachusetts Avenue, Rindge Avenue"
+harvard_to_inman,616.9,2473.3,"Kirkland Street, Beacon Street"
+harvard_to_common,1462.8,9103.7,"Soldiers Field Road, Storrow Drive"
+kendall_to_common,682.7,2804.4,"MA 3, Charles Street"
